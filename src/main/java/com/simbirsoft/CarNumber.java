@@ -1,5 +1,6 @@
 package com.simbirsoft;
 
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -7,24 +8,23 @@ public class CarNumber {
 
     static String[] arrCarNumber = new String[3];
 
-    public static void getCarNumber() {
-        System.out.println("ПРИМЕР: А123БС39");
-        System.out.print("ВВЕДИЕТ НОМЕР:");
+    public static String getCarNumber() {
+
         Scanner input = new Scanner(System.in);
-        //String inCarNumber = input.next();
+        String inCarNumber = input.next();
 
         for (int i = 0; i < arrCarNumber.length; i++) {
-            String inCarNumber = input.next();
             if (arrCarNumber[i] == null) {
                 arrCarNumber[i] = inCarNumber.toUpperCase(Locale.ROOT);
-                break;
-            } else {
+                System.out.println("Автомобиль с номером " + inCarNumber + " припаркован в ячейку: " +
+                        Arrays.asList(arrCarNumber).indexOf(arrCarNumber[i]));
                 break;
             }
+            if (i == arrCarNumber.length-1) {
+                System.out.println("Все парковочные места заняты!");
+            }
         }
-        for (int i = 0; i < arrCarNumber.length; i++) {
-            System.out.println(arrCarNumber[i]);
-        }
+        return inCarNumber;
     }
 }
 
