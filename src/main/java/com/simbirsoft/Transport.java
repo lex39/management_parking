@@ -10,5 +10,5 @@ public abstract class Transport {
         this.carNumber = carNumber;
     }
 
-    public abstract String moveObject(String nameDriver, String carNumber);
+    public abstract String moveObject(String nameDriver, String carNumber, String number);
 }

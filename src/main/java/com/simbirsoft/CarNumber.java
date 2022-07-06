@@ -16,8 +16,10 @@ public class CarNumber {
         for (int i = 0; i < arrCarNumber.length; i++) {
             if (arrCarNumber[i] == null) {
                 arrCarNumber[i] = inCarNumber.toUpperCase(Locale.ROOT);
-                System.out.println("Автомобиль с номером " + inCarNumber + " припаркован в ячейку: " +
-                        Arrays.asList(arrCarNumber).indexOf(arrCarNumber[i]));
+                System.out.println();
+                System.out.println("************");
+                System.out.println("Траспортное средство с номером " + inCarNumber + " припарковано в ячейку: " +
+                        Arrays.asList(arrCarNumber).indexOf(arrCarNumber[i + 1]));
                 break;
             }
             if (i == arrCarNumber.length-1) {

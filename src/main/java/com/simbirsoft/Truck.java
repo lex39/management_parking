@@ -10,8 +10,8 @@ public class Truck extends Transport{
     }
 
     @Override
-    public String moveObject(String nameDriver, String carNumber) {
-        return "ФИО водителя: " + nameDriver + "\n" + "Номер автобуса: " + carNumber
-                + "\n" + "Номер маршрута: " + isLoaded;
+    public String moveObject(String nameDriver, String carNumber, String number) {
+        return "Имя водителя: " + nameDriver + "\n" + "Номер грузовика: " + carNumber
+                + "\n" + "Загружен: " + isLoaded;
     }
 }
